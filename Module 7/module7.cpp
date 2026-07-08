@@ -51,7 +51,7 @@ int splitCSV(string line, string fields[]) {
 
 int main() {
   // Opens CSV dataset
-  ifstream file("Dataset.csv");
+  ifstream file("Dataset .csv");
 
   // Checks if file opened
   if (!file) {
