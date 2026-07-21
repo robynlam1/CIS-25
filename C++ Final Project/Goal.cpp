@@ -1,19 +1,14 @@
 #include "Goal.h"
 
-Goal::Goal() {
-    name = "";
-    category = "";
-    difficulty = "";
-    xp = 0;
+Goal::Goal(string n, string c, int x) {
+    name = n;
+    category = c;
+    xp = x;
     completed = false;
 }
 
-Goal::Goal(string n, string cat, string diff, int xp, bool comp) {
-    name = n;
-    category = cat;
-    difficulty = diff;
-    xp = xp;
-    completed = comp;
+void Goal::completeGoal() {
+    completed = true;
 }
 
 string Goal::getName() {
@@ -22,10 +17,6 @@ string Goal::getName() {
 
 string Goal::getCategory() {
     return category;
-}
-
-string Goal::getDifficulty() {
-    return difficulty;
 }
 
 int Goal::getXP() {
@@ -40,18 +31,21 @@ void Goal::setName(string n) {
     name = n;
 }
 
-void Goal::setCategory(string comp) {
-    category = comp;
+void Goal::setCategory(string c) {
+    category = c;
 }
 
-void Goal::setDifficulty(string diff) {
-    difficulty = diff;
+void Goal::setXP(int x) {
+    xp = x;
 }
 
-void Goal::setXP(int xp) {
-    xp = xp;
-}
+void Goal::displayGoal() {
+    cout << "\nGoal: " << name << endl;
+    cout << "Category: " << category << endl;
+    cout << "XP Reward: " << xp << endl;
 
-void Goal::setCompleted(bool comp) {
-    completed = comp;
+    if (completed)
+        cout << "Status: Completed" << endl;
+    else
+        cout << "Status: Incomplete" << endl;
 }
