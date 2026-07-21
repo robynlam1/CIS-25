@@ -7,10 +7,6 @@ Goal::Goal(string n, string c, int x) {
     completed = false;
 }
 
-void Goal::completeGoal() {
-    completed = true;
-}
-
 string Goal::getName() {
     return name;
 }
@@ -39,6 +35,14 @@ void Goal::setXP(int x) {
     xp = x;
 }
 
+void Goal::setCompleted(bool c) {
+    completed = c;
+}
+
+void Goal::completeGoal() {
+    completed = true;
+}
+
 void Goal::displayGoal() {
     cout << "\nGoal: " << name << endl;
     cout << "Category: " << category << endl;
@@ -47,5 +51,5 @@ void Goal::displayGoal() {
     if (completed)
         cout << "Status: Completed" << endl;
     else
-        cout << "Status: Incomplete" << endl;
+        cout << "Status: Not Completed" << endl;
 }
