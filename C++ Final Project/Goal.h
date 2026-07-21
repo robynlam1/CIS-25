@@ -16,8 +16,6 @@ class Goal {
   public:
       Goal(string n = "", string c = "", int x = 0);
   
-      void completeGoal();
-  
       string getName();
       string getCategory();
       int getXP();
@@ -26,7 +24,9 @@ class Goal {
       void setName(string n);
       void setCategory(string c);
       void setXP(int x);
+      void setCompleted(bool c);
   
+      void completeGoal();
       void displayGoal();
 };
 
