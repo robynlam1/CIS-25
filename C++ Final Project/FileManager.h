@@ -3,7 +3,8 @@
 
 #include <iostream>
 #include <fstream>
-#include <vector>
+#include <string>
+
 #include "Goal.h"
 #include "User.h"
 
@@ -11,11 +12,11 @@ using namespace std;
 
 class FileManager {
   public:
-      void saveGoals(vector<Goal>& goals);
-      void loadGoals(vector<Goal>& goals);
+      void saveGoals(Goal goals[], int goalCount);
+      void loadGoals(Goal goals[], int &goalCount);
   
-      void saveUser(User& user);
-      void loadUser(User& user);
+      void saveUser(User user);
+      void loadUser(User &user);
 };
 
 #endif
